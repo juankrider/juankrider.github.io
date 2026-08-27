@@ -23,7 +23,7 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="section-padding bg-dark-950">
+    <section id="certifications" className="section-padding bg-zinc-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Certifications() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
             Certificaciones
           </div>
-          <h2 className="text-balance text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
             Formación y acreditaciones
           </h2>
         </motion.div>
@@ -52,8 +52,8 @@ export default function Certifications() {
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white shadow-lg shadow-accent/30">
               <Award size={28} />
             </div>
-            <h3 className="text-2xl font-bold text-white">CSWP</h3>
-            <p className="mt-2 text-sm text-gray-400">
+            <h3 className="text-2xl font-bold text-zinc-900">CSWP</h3>
+            <p className="mt-2 text-sm text-zinc-500">
               Certified SolidWorks Professional
             </p>
             <span className="mt-4 inline-block rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent">
@@ -68,13 +68,13 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="glass-card"
+              className="drawer-card"
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-accent">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-100 text-accent">
                 <GraduationCap size={20} />
               </div>
-              <h3 className="text-lg font-semibold text-white">{cert.title}</h3>
-              <p className="mt-2 text-sm text-gray-400">{cert.subtitle}</p>
+              <h3 className="text-lg font-semibold text-zinc-900">{cert.title}</h3>
+              <p className="mt-2 text-sm text-zinc-500">{cert.subtitle}</p>
             </motion.div>
           ))}
         </div>

@@ -29,7 +29,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-dark-950">
+    <section id="contact" className="section-padding bg-zinc-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,10 +40,10 @@ export default function Contact() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
             Contacto
           </div>
-          <h2 className="text-balance text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
             ¿Construimos algo juntos?
           </h2>
-          <p className="mt-4 max-w-2xl text-sm text-gray-400 md:text-base">
+          <p className="mt-4 max-w-2xl text-sm text-zinc-500 md:text-base">
             ¿Un producto físico, una automatización inteligente, o software que
             lo conecte todo? Hablemos.
           </p>
@@ -63,12 +63,12 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card flex items-center gap-4"
+                className="drawer-card flex items-center gap-4"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-accent">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-100 text-accent">
                   <link.icon size={18} />
                 </div>
-                <span className="text-sm font-medium text-gray-300">
+                <span className="text-sm font-medium text-zinc-600">
                   {link.label}
                 </span>
               </a>
@@ -80,17 +80,17 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card"
+            className="drawer-card"
           >
             {sent ? (
               <div className="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 text-accent">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-accent">
                   <Send size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-zinc-900">
                   ¡Mensaje enviado!
                 </h3>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-zinc-500">
                   Gracias por escribirme. Te responderé pronto.
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-gray-300"
+                    className="mb-2 block text-sm font-medium text-zinc-600"
                   >
                     Nombre
                   </label>
@@ -111,14 +111,14 @@ export default function Contact() {
                     onChange={(e) =>
                       setForm({ ...form, name: e.target.value })
                     }
-                    className="w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-accent"
+                    className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition-colors focus:border-accent"
                     placeholder="Tu nombre"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-medium text-gray-300"
+                    className="mb-2 block text-sm font-medium text-zinc-600"
                   >
                     Email
                   </label>
@@ -130,14 +130,14 @@ export default function Contact() {
                     onChange={(e) =>
                       setForm({ ...form, email: e.target.value })
                     }
-                    className="w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-accent"
+                    className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition-colors focus:border-accent"
                     placeholder="tu@email.com"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-2 block text-sm font-medium text-gray-300"
+                    className="mb-2 block text-sm font-medium text-zinc-600"
                   >
                     Mensaje
                   </label>
@@ -149,7 +149,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setForm({ ...form, message: e.target.value })
                     }
-                    className="w-full resize-none rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-accent"
+                    className="w-full resize-none rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition-colors focus:border-accent"
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </div>

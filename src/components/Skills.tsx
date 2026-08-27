@@ -48,7 +48,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding bg-dark-900">
+    <section id="skills" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,10 +59,10 @@ export default function Skills() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
             Skills
           </div>
-          <h2 className="text-balance text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
             Un espectro técnico completo
           </h2>
-          <p className="mt-4 max-w-2xl text-sm text-gray-400 md:text-base">
+          <p className="mt-4 max-w-2xl text-sm text-zinc-500 md:text-base">
             Del modelado mecánico al desarrollo de agentes de IA: competencias
             que cruzan la frontera entre el producto físico y el software
             inteligente.
@@ -77,13 +77,13 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card"
+              className="drawer-card"
             >
               <div className="mb-5 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <category.icon size={20} />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-zinc-900">
                   {category.title}
                 </h3>
               </div>

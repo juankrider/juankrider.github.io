@@ -24,7 +24,7 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section id="stack" className="section-padding bg-dark-900">
+    <section id="stack" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export default function TechStack() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
             Stack Tecnológico
           </div>
-          <h2 className="text-balance text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
             Herramientas con las que trabajo
           </h2>
         </motion.div>
@@ -50,7 +50,7 @@ export default function TechStack() {
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="rounded-xl border border-white/10 bg-white/[0.02] px-5 py-3 text-sm font-medium text-gray-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent"
+              className="rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-medium text-zinc-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-400 hover:text-zinc-900"
             >
               {tech}
             </span>

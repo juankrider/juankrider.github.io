@@ -27,14 +27,14 @@ export default function Navbar() {
       className={clsx(
         "fixed top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "border-b border-white/5 bg-dark-950/80 backdrop-blur-xl"
+          ? "border-b border-zinc-200 bg-white/90 backdrop-blur-xl"
           : "bg-transparent"
       )}
     >
       <nav className="container-custom mx-auto flex h-16 items-center justify-between px-6 md:px-12 lg:px-24">
         <a
           href="#"
-          className="text-lg font-bold tracking-tight text-white transition-colors hover:text-accent"
+          className="text-lg font-bold tracking-tight text-zinc-900 transition-colors hover:text-accent"
         >
           JC<span className="text-accent">.</span>
         </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-gray-400 transition-colors hover:text-white"
+                className="text-sm text-zinc-500 transition-colors hover:text-zinc-900"
               >
                 {link.label}
               </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="text-gray-400 md:hidden"
+          className="text-zinc-500 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -65,13 +65,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-white/5 bg-dark-950/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-zinc-200 bg-white/95 backdrop-blur-xl md:hidden">
           <ul className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block py-3 text-sm text-gray-400 transition-colors hover:text-white"
+                  className="block py-3 text-sm text-zinc-500 transition-colors hover:text-zinc-900"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}

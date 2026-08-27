@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-dark-900">
+    <section id="projects" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,10 @@ export default function Projects() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
             Proyectos
           </div>
-          <h2 className="text-balance text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
             Trabajo en acción
           </h2>
-          <p className="mt-4 max-w-2xl text-sm text-gray-400 md:text-base">
+          <p className="mt-4 max-w-2xl text-sm text-zinc-500 md:text-base">
             Proyectos que cruzan el diseño industrial, el software y la
             inteligencia artificial.
           </p>
@@ -64,21 +64,21 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group glass-card relative overflow-hidden"
+              className="group drawer-card relative overflow-hidden"
             >
               <div
                 className={`mb-6 flex h-24 w-full items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} opacity-80 transition-opacity duration-300 group-hover:opacity-100`}
               >
                 <ArrowUpRight
                   size={32}
-                  className="text-white/80 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  className="text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                 />
               </div>
 
-              <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-accent">
+              <h3 className="text-xl font-semibold text-zinc-900 transition-colors group-hover:text-accent">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-400">
+              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
                 {project.description}
               </p>
 
