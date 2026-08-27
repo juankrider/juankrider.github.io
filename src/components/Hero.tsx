@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative flex min-h-[70vh] items-start overflow-hidden bg-ground">
       {/* Rejilla técnica de fondo */}
       <div className="hero-grid-fine pointer-events-none absolute inset-0" />
-      <div className="relative grid w-full grid-cols-1 items-start gap-12 px-8 pb-16 pt-20 md:px-12 lg:max-w-[1120px] lg:grid-cols-[1fr_auto] lg:justify-start lg:pl-16 lg:pr-0">
+      <div className="relative grid w-full grid-cols-1 items-start gap-12 px-8 pb-16 pt-20 md:px-12 lg:max-w-[1120px] lg:grid-cols-[1fr_auto] lg:justify-start lg:px-0 lg:pl-8">
         {/* Copy en ficha técnica */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
