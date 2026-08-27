@@ -1,19 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Cog,
-  Code2,
-  BrainCircuit,
-  Palette,
-  Wrench,
-} from "lucide-react";
 
-const skillCategories = [
+const skills = [
   {
-    icon: Cog,
+    num: "01",
     title: "Ingeniería",
-    skills: [
+    items: [
       "SolidWorks",
       "AutoCAD",
       "Diseño Mecánico",
@@ -23,14 +16,14 @@ const skillCategories = [
     ],
   },
   {
-    icon: Code2,
+    num: "02",
     title: "Software",
-    skills: ["Python", "FastAPI", "APIs", "Git", "Linux"],
+    items: ["Python", "FastAPI", "APIs", "Git", "Linux", "Docker"],
   },
   {
-    icon: BrainCircuit,
-    title: "IA",
-    skills: [
+    num: "03",
+    title: "IA & Automatización",
+    items: [
       "Ollama",
       "LLMs",
       "Agentes IA",
@@ -40,9 +33,9 @@ const skillCategories = [
     ],
   },
   {
-    icon: Palette,
+    num: "04",
     title: "Diseño",
-    skills: ["Blender", "Photoshop", "UX Thinking", "Product Design"],
+    items: ["Blender", "Photoshop", "UX Thinking", "Product Design"],
   },
 ];
 
@@ -56,41 +49,37 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
-            Skills
-          </div>
-          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
-            Un espectro técnico completo
+          <span className="section-label">El conocimiento lo es todo</span>
+          <h2 className="section-title">
+            Mis
+            <br />
+            Skills.
           </h2>
-          <p className="mt-4 max-w-2xl text-sm text-zinc-500 md:text-base">
-            Del modelado mecánico al desarrollo de agentes de IA: competencias
-            que cruzan la frontera entre el producto físico y el software
-            inteligente.
-          </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {skillCategories.map((category, index) => (
+        <div className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
+          {skills.map((skill, index) => (
             <motion.div
-              key={category.title}
+              key={skill.num}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="drawer-card"
+              className="border-t border-gray-200 pt-6"
             >
-              <div className="mb-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                  <category.icon size={20} />
-                </div>
-                <h3 className="text-lg font-semibold text-zinc-900">
-                  {category.title}
-                </h3>
+              <div className="mb-3 text-sm font-medium text-gray-400">
+                {skill.num}.
               </div>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span key={skill} className="skill-tag">
-                    {skill}
+              <h3 className="serif text-2xl font-medium text-gray-900">
+                {skill.title}
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {skill.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600"
+                  >
+                    {item}
                   </span>
                 ))}
               </div>

@@ -1,42 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
     title: "Atlas",
-    description:
-      "Asistente personal de IA modular. Un copiloto que integra modelos locales, agentes y conocimiento personal para gestionar tareas y flujos de trabajo.",
-    stack: ["Python", "Ollama", "OpenClaw", "Obsidian"],
-    gradient: "from-blue-500 to-cyan-500",
+    category: "IA · Automatización",
+    desc: "Asistente personal de IA modular con modelos locales.",
+    gradient: "from-gray-900 to-gray-600",
   },
   {
     title: "PDF AI Assistant",
-    description:
-      "Extracción, análisis y comprensión de documentación técnica con IA. Reduce horas de lectura manual a respuestas precisas y accionables.",
-    stack: ["Python", "FastAPI"],
-    gradient: "from-cyan-500 to-blue-600",
+    category: "IA · Documentación",
+    desc: "Extracción y análisis de documentación técnica con IA.",
+    gradient: "from-slate-700 to-slate-500",
   },
   {
     title: "StreetBall",
-    description:
-      "Plataforma web para la organización de eventos y competiciones deportivas de baloncesto callejero.",
-    stack: ["HTML", "CSS", "JS"],
-    gradient: "from-indigo-500 to-purple-500",
+    category: "Producto Web",
+    desc: "Plataforma web para organización deportiva.",
+    gradient: "from-neutral-800 to-neutral-600",
   },
   {
     title: "AI Automation Lab",
-    description:
-      "Laboratorio de automatizaciones personales: flujos que conectan APIs y herramientas mediante agentes inteligentes para eliminar trabajo repetitivo.",
-    stack: ["Python", "MCP", "APIs"],
-    gradient: "from-emerald-500 to-teal-500",
+    category: "IA · Tooling",
+    desc: "Automatizaciones personales con APIs, MCP y agentes.",
+    gradient: "from-zinc-800 to-zinc-600",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="works" className="section-padding bg-gray-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,52 +39,44 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
-            Proyectos
-          </div>
-          <h2 className="text-balance text-3xl font-bold text-zinc-900 md:text-4xl">
-            Trabajo en acción
+          <span className="section-label">Echa un vistazo</span>
+          <h2 className="section-title">
+            Mis
+            <br />
+            Trabajos.
           </h2>
-          <p className="mt-4 max-w-2xl text-sm text-zinc-500 md:text-base">
+          <p className="mt-6 max-w-xl text-base text-gray-500">
             Proyectos que cruzan el diseño industrial, el software y la
             inteligencia artificial.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={project.title}
+              href="#contact"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group drawer-card relative overflow-hidden"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="group block"
             >
               <div
-                className={`mb-6 flex h-24 w-full items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} opacity-80 transition-opacity duration-300 group-hover:opacity-100`}
+                className={`mb-4 flex aspect-[4/3] w-full items-end justify-between rounded-md bg-gradient-to-br ${project.gradient} p-5 transition-transform duration-300 group-hover:-translate-y-1`}
               >
-                <ArrowUpRight
-                  size={32}
-                  className="text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
+                <span className="text-xs font-medium tracking-wide text-white/80 uppercase">
+                  {project.category}
+                </span>
+                <span className="serif text-2xl text-white/90">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
-
-              <h3 className="text-xl font-semibold text-zinc-900 transition-colors group-hover:text-accent">
+              <h3 className="serif text-2xl font-medium text-gray-900 transition-colors group-hover:text-gray-600">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
-                {project.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <span key={tech} className="skill-tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              <p className="mt-1 text-sm text-gray-500">{project.desc}</p>
+            </motion.a>
           ))}
         </div>
       </div>

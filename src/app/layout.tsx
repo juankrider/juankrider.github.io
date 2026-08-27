@@ -56,9 +56,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#fafafa" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className="min-h-screen bg-zinc-50 text-zinc-900 antialiased">
+      <body className="min-h-screen bg-white text-gray-900 antialiased">
         {children}
       </body>
     </html>

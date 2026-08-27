@@ -1,19 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white px-6 py-8 md:px-12 lg:px-24">
-      <div className="container-custom mx-auto flex flex-col items-center justify-between gap-4 md:flex-row">
-        <a
-          href="#"
-          className="text-lg font-bold tracking-tight text-zinc-900"
-        >
-          JC<span className="text-accent">.</span>
-        </a>
-        <p className="text-center text-xs text-zinc-500 md:text-sm">
-          © {new Date().getFullYear()} Juan Carlos Cerrato. Ingeniería,
-          diseño & IA.
-        </p>
-        <p className="text-xs text-zinc-400">
-          Hecho con Next.js y mucho café
+    <footer className="bg-gray-900 px-6 py-16 md:px-12 lg:px-24">
+      <div className="container-custom mx-auto text-center">
+        <h2 className="serif text-4xl font-medium text-white md:text-5xl">
+          Let's Get
+          <br />
+          Creative.
+        </h2>
+        <div className="mx-auto mt-10 h-px w-16 bg-gray-600" />
+        <p className="mt-8 text-sm text-gray-400">
+          © {new Date().getFullYear()} Juan Carlos Cerrato · Ingeniería &
+          IA
         </p>
       </div>
     </footer>
