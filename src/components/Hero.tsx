@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-start overflow-hidden bg-ground">
+    <section className="relative flex min-h-[70vh] items-start overflow-hidden bg-ground">
       {/* Rejilla técnica de fondo */}
       <div className="hero-grid-fine pointer-events-none absolute inset-0" />
-      <div className="container-custom relative grid w-full items-start gap-12 px-6 pb-16 pt-28 md:px-12 lg:px-24 lg:grid-cols-2">
+      <div className="relative grid w-full grid-cols-1 items-start gap-12 px-6 pb-16 pt-20 md:px-12 lg:grid-cols-[1fr_auto] lg:px-24">
         {/* Copy en ficha técnica */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -58,7 +58,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.15 }}
-          className="relative hidden select-none flex-col gap-6 lg:flex"
+          className="relative hidden select-none flex-col justify-self-end gap-6 lg:flex"
         >
           <div className="mono mb-2 text-[11px] uppercase tracking-[0.2em] text-gray-mid">
             Exploded view · JCC-01

@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-ink/20 bg-ground/90 backdrop-blur-sm">
-      <nav className="container-custom mx-auto flex h-11 items-center justify-between px-6 md:px-12 lg:px-24">
+      <nav className="flex h-11 items-center justify-between px-6 md:px-12 lg:px-24">
         <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
           <span className="inline-block h-2 w-2 rounded-full bg-signal" />
