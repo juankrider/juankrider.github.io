@@ -7,7 +7,7 @@ export default function Footer() {
           Model JCC-01
         </div>
 
-        <h2 className="text-4xl font-medium leading-none text-paper md:text-5xl">
+        <h2 className="text-3xl font-medium leading-none text-paper md:text-4xl">
           Let's get creative.
         </h2>
 

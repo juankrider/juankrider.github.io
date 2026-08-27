@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-ground px-6 pt-16 md:px-12 lg:px-24">
-      <div className="container-custom grid w-full items-center gap-12 py-16 lg:grid-cols-2">
+      {/* Rejilla técnica de fondo */}
+      <div className="hero-grid-fine pointer-events-none absolute inset-0" />
+      <div className="container-custom relative grid w-full items-center gap-12 py-16 lg:grid-cols-2">
         {/* Copy en ficha técnica */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -17,7 +19,7 @@ export default function Hero() {
             Model JCC-01 · Portfolio
           </div>
 
-          <h1 className="mt-8 text-5xl font-medium leading-[0.95] tracking-tight text-ink md:text-7xl">
+          <h1 className="mt-8 text-5xl font-medium leading-[0.95] tracking-tight text-ink md:text-6xl">
             Juan Carlos
             <br />
             Cerrato

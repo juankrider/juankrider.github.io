@@ -74,7 +74,7 @@ export default function Projects() {
                 </span>
               </div>
 
-              <h3 className="mt-3 text-2xl font-medium leading-tight text-ink">
+              <h3 className="mt-3 text-xl font-medium leading-tight text-ink">
                 {p.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">

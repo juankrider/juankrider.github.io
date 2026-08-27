@@ -22,7 +22,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: 48px;
 }
 
 body {
@@ -75,13 +75,30 @@ body {
   }
 
   .section-title {
-    @apply text-4xl font-medium leading-none tracking-tight text-ink md:text-6xl;
+    @apply text-3xl font-medium leading-tight tracking-tight text-ink md:text-5xl;
   }
 
   /* Línea de separación funcional tipo ficha */
   .rule {
     @apply block border-t border-ink/20;
   }
+}
+
+/* Rejilla técnica Braun (grid de dibujo técnico) */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(25, 25, 25, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 25, 25, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hero-grid-fine {
+  background-image:
+    linear-gradient(to right, rgba(25, 25, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 25, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(25, 25, 25, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 25, 25, 0.08) 1px, transparent 1px);
+  background-size: 8px 8px, 8px 8px, 160px 160px, 160px 160px;
 }
 
 @layer utilities {

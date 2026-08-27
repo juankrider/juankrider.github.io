@@ -15,21 +15,21 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-ink/20 bg-ground/90 backdrop-blur-sm">
-      <nav className="container-custom mx-auto flex h-16 items-center justify-between px-6 md:px-12 lg:px-24">
-        <a href="#" className="flex items-center gap-3">
+      <nav className="container-custom mx-auto flex h-11 items-center justify-between px-6 md:px-12 lg:px-24">
+        <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
-          <span className="inline-block h-2.5 w-2.5 rounded-full bg-signal" />
-          <span className="text-sm font-medium uppercase tracking-[0.15em] text-ink">
+          <span className="inline-block h-2 w-2 rounded-full bg-signal" />
+          <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-ink">
             Cerrato
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 md:flex">
           {navLinks.map((link, i) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="mono text-[11px] uppercase tracking-wide text-gray-mid transition-colors duration-100 hover:text-ink"
+                className="mono text-[10px] uppercase tracking-wide text-gray-mid transition-colors duration-100 hover:text-ink"
               >
                 <span className="mr-1 text-gray-light">{String(i + 1).padStart(2, "0")}</span>
                 {link.label}
@@ -43,7 +43,7 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
-          <span className="mono text-[12px] uppercase tracking-wide">
+          <span className="mono text-[11px] uppercase tracking-wide">
             {mobileOpen ? "Close" : "Menu"}
           </span>
         </button>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="mono block border-b border-ink/10 py-3 text-[11px] uppercase tracking-wide text-gray-mid transition-colors hover:text-ink"
+                  className="mono block border-b border-ink/10 py-2.5 text-[10px] uppercase tracking-wide text-gray-mid transition-colors hover:text-ink"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
