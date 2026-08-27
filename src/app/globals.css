@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 :root {
-  --accent: #1d4ed8;
-  --ink: #1f2937;
+  /* Dieter Rams / Braun tokens */
+  --ground: #e4e1dc;
+  --paper: #f5f4f0;
+  --ink: #191919;
+  --gray-mid: #5c5c5c;
+  --gray-light: #a8a8a8;
+  --signal: #e96a26;
 }
 
 * {
@@ -21,60 +26,61 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #1f2937;
-  font-family: "Inter", system-ui, sans-serif;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Archivo", "Helvetica Neue", Helvetica, system-ui, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(29, 78, 216, 0.12);
-  color: #111827;
+  background: var(--signal);
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4f4f5;
+  background: var(--ground);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  border-radius: 4px;
+  background: var(--gray-mid);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
-}
-
-.serif {
-  font-family: "Playfair Display", serif;
+.mono {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 @layer components {
   .section-padding {
-    @apply px-6 py-24 md:px-12 lg:px-24;
+    @apply px-6 py-16 md:px-12 lg:px-24;
   }
 
   .container-custom {
     @apply mx-auto max-w-5xl;
   }
 
-  /* Etiqueta pequeña en cursiva arriba de cada sección */
-  .section-label {
-    @apply mb-2 block text-sm font-normal italic tracking-wide text-gray-500;
+  /* Ficha técnica supra-sección */
+  .spec-label {
+    @apply mono mb-6 flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-gray-mid;
+  }
+
+  .spec-index {
+    @apply mono text-[10px] text-gray-light;
   }
 
   .section-title {
-    @apply serif text-4xl font-medium leading-tight text-gray-900 md:text-5xl;
+    @apply text-4xl font-medium leading-none tracking-tight text-ink md:text-6xl;
   }
 
-  .btn-outline-dark {
-    @apply inline-flex items-center gap-2 border border-gray-300 px-6 py-3 text-sm font-medium text-gray-800 transition-all duration-300 hover:border-gray-900 hover:bg-gray-900 hover:text-white;
+  /* Línea de separación funcional tipo ficha */
+  .rule {
+    @apply block border-t border-ink/20;
   }
 }
 

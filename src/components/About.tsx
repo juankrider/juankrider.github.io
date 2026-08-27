@@ -2,62 +2,77 @@
 
 import { motion } from "framer-motion";
 
+const specs = [
+  { key: "Role", value: "Ingeniero de Diseño Industrial · I+D" },
+  { key: "Certification", value: "CSWP — SolidWorks Professional" },
+  { key: "Education", value: "Ing. Diseño Industrial · Máster Inyección (UPV)" },
+  { key: "Focus", value: "Mecánica · Producto · SF6-Free · IA" },
+];
+
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-paper">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
-          <span className="section-label">Soy un libro abierto</span>
+          <div className="spec-label">
+            <span className="spec-index">01</span>
+            Profile
+          </div>
           <h2 className="section-title">
-            Sobre
-            <br />
-            Mí.
+            About.
           </h2>
         </motion.div>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2">
+        <div className="mt-12 grid gap-10 lg:grid-cols-5">
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-base leading-relaxed text-gray-600"
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="text-[15px] leading-relaxed text-ink/80 lg:col-span-3"
           >
-            Soy un <strong className="font-semibold text-gray-900">Ingeniero de
-            Diseño Industrial</strong> con doble vocación: la ingeniería
-            mecánica que da forma a productos físicos y el software que
-            automatiza el mundo digital. Trabajo en{" "}
-            <strong className="font-semibold text-gray-900">I+D y diseño
-            mecánico</strong> con SolidWorks, AutoCAD, simulación y prototipado,
-            con experiencia en celdas de media tensión y soluciones SF6-Free.
+            Doble vocación: la ingeniería mecánica que da forma a productos
+            físicos y el software que automatiza el mundo digital. Trabajo en{" "}
+            <span className="font-medium text-ink">I+D y diseño mecánico</span>{" "}
+            con SolidWorks, AutoCAD, simulación y prototipado, con experiencia
+            en celdas de media tensión y soluciones SF6-Free. En paralelo,
+            construyo{" "}
+            <span className="font-medium text-ink">herramientas de IA,
+            automatización y software open source</span> con Python, FastAPI y
+            agentes locales sobre Linux. Del taller a la terminal, con
+            mentalidad internacional y remota.
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          {/* Spec table — first-class */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base leading-relaxed text-gray-600"
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="lg:col-span-2"
           >
-            En paralelo construyo{" "}
-            <strong className="font-semibold text-gray-900">herramientas de IA,
-            automatización y software open source</strong> con Python, FastAPI y
-            agentes locales sobre un ecosistema Linux. Esta combinación — del
-            taller a la terminal — me permite resolver problemas de forma
-            integral, con mentalidad internacional y remota, y creo en el
-            conocimiento open source como catalizador de innovación.
-          </motion.p>
-        </div>
-
-        <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4 border-t border-gray-200 pt-8 text-sm text-gray-500">
-          <span><strong className="font-semibold text-gray-900">CSWP</strong> · Certified SolidWorks Professional</span>
-          <span><strong className="font-semibold text-gray-900">Máster</strong> · Inyección de Plásticos (UPV)</span>
-          <span><strong className="font-semibold text-gray-900">Ingeniería</strong> · Diseño Industrial</span>
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.2em] text-gray-mid">
+              Specifications
+            </div>
+            <div className="border-t border-ink/20">
+              {specs.map((s) => (
+                <div
+                  key={s.key}
+                  className="grid grid-cols-[auto_1fr] gap-6 border-b border-ink/10 py-3"
+                >
+                  <span className="mono text-[10px] uppercase tracking-wide text-gray-light">
+                    {s.key}
+                  </span>
+                  <span className="mono text-[11px] text-ink">{s.value}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

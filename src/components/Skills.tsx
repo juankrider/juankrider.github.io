@@ -5,15 +5,8 @@ import { motion } from "framer-motion";
 const skills = [
   {
     num: "01",
-    title: "Ingeniería",
-    items: [
-      "SolidWorks",
-      "AutoCAD",
-      "Diseño Mecánico",
-      "Simulación",
-      "Prototipado",
-      "Fabricación",
-    ],
+    title: "Engineering",
+    items: ["SolidWorks", "AutoCAD", "Diseño Mecánico", "Simulación", "Prototipado", "Fabricación"],
   },
   {
     num: "02",
@@ -22,66 +15,53 @@ const skills = [
   },
   {
     num: "03",
-    title: "IA & Automatización",
-    items: [
-      "Ollama",
-      "LLMs",
-      "Agentes IA",
-      "Automatización",
-      "MCP",
-      "Open Source AI",
-    ],
+    title: "AI / Automation",
+    items: ["Ollama", "LLMs", "Agentes IA", "Automatización", "MCP", "Open Source AI"],
   },
   {
     num: "04",
-    title: "Diseño",
+    title: "Design",
     items: ["Blender", "Photoshop", "UX Thinking", "Product Design"],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding bg-white">
+    <section id="skills" className="section-padding bg-paper">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
-          <span className="section-label">El conocimiento lo es todo</span>
-          <h2 className="section-title">
-            Mis
-            <br />
-            Skills.
-          </h2>
+          <div className="spec-label">
+            <span className="spec-index">03</span>
+            Skills
+          </div>
+          <h2 className="section-title">Capabilities.</h2>
         </motion.div>
 
-        <div className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
-          {skills.map((skill, index) => (
+        <div className="mt-12 border-t border-ink/20">
+          {skills.map((s, i) => (
             <motion.div
-              key={skill.num}
-              initial={{ opacity: 0, y: 20 }}
+              key={s.num}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-t border-gray-200 pt-6"
+              transition={{ duration: 0.3, delay: i * 0.04 }}
+              className="grid gap-4 border-b border-ink/10 py-6 sm:grid-cols-[3rem_1fr]"
             >
-              <div className="mb-3 text-sm font-medium text-gray-400">
-                {skill.num}.
-              </div>
-              <h3 className="serif text-2xl font-medium text-gray-900">
-                {skill.title}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skill.items.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600"
-                  >
-                    {item}
-                  </span>
-                ))}
+              <span className="mono text-[10px] text-gray-light">{s.num}</span>
+              <div>
+                <h3 className="text-lg font-medium text-ink">{s.title}</h3>
+                <div className="mono mt-3 flex flex-wrap gap-x-6 gap-y-2">
+                  {s.items.map((it) => (
+                    <span key={it} className="text-[12px] text-gray-mid">
+                      {it}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

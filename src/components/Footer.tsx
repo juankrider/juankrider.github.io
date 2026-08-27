@@ -1,16 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 px-6 py-16 md:px-12 lg:px-24">
-      <div className="container-custom mx-auto text-center">
-        <h2 className="serif text-4xl font-medium text-white md:text-5xl">
-          Let's Get
-          <br />
-          Creative.
+    <footer className="bg-ink px-6 py-16 md:px-12 lg:px-24">
+      <div className="container-custom mx-auto flex flex-col items-center gap-6 text-center">
+        <div className="mono flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-paper/70">
+          <span className="inline-block h-2 w-2 rounded-full bg-signal" />
+          Model JCC-01
+        </div>
+
+        <h2 className="text-4xl font-medium leading-none text-paper md:text-5xl">
+          Let's get creative.
         </h2>
-        <div className="mx-auto mt-10 h-px w-16 bg-gray-600" />
-        <p className="mt-8 text-sm text-gray-400">
-          © {new Date().getFullYear()} Juan Carlos Cerrato · Ingeniería &
-          IA
+
+        <p className="mono text-[11px] uppercase tracking-wide text-paper/50">
+          © {new Date().getFullYear()} Juan Carlos Cerrato · Engineering & AI
         </p>
       </div>
     </footer>

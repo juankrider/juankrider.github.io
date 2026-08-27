@@ -4,18 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "#3b82f6",
-        "accent-hover": "#2563eb",
-        dark: {
-          950: "#030712",
-          900: "#0a0f1a",
-          800: "#111827",
-          700: "#1a2236",
-          600: "#243049",
-        },
+        ground: "#e4e1dc",
+        paper: "#f5f4f0",
+        ink: "#191919",
+        "gray-mid": "#5c5c5c",
+        "gray-light": "#a8a8a8",
+        signal: "#e96a26",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Archivo", "Helvetica Neue", "Helvetica", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",
