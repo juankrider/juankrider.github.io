@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-ground pt-16">
+    <section className="relative flex min-h-screen items-start overflow-hidden bg-ground">
       {/* Rejilla técnica de fondo */}
       <div className="hero-grid-fine pointer-events-none absolute inset-0" />
-      <div className="container-custom relative grid w-full items-center gap-12 px-6 py-16 md:px-12 lg:px-24 lg:grid-cols-2">
+      <div className="container-custom relative grid w-full items-start gap-12 px-6 pb-16 pt-28 md:px-12 lg:px-24 lg:grid-cols-2">
         {/* Copy en ficha técnica */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
