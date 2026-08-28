@@ -32,7 +32,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Juan Carlos Cerrato — Ingeniero de Diseño Industrial">
-      <div className="grid gap-8 lg:grid-cols-[1fr_420px]">
+      <div className="grid gap-8 lg:grid-cols-[1fr_520px]">
         {/* Columna izquierda: Texto e info */}
         <div className="space-y-6 lg:col-span-1">
           <div className="space-y-4">
@@ -101,7 +101,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
 
         {/* Columna derecha: Carrusel más pequeño */}
         <div className="lg:col-span-1">
-          <div className="relative aspect-square max-w-[420px] mx-auto">
+          <div className="relative aspect-square max-w-[520px] mx-auto self-center">
             <div className="relative aspect-square overflow-hidden bg-ground border border-ink/15">
               <AnimatePresence mode="wait">
                 <motion.img
