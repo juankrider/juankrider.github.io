@@ -14,7 +14,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 z-50 w-full max-w-[calc(100%-2rem)] mx-auto rounded-xl border border-signal/40 bg-signal/20 backdrop-blur-sm">
+    <header className="fixed top-4 z-50 w-full max-w-[1200px] mx-auto rounded-xl border border-ink/20 bg-ink/5 backdrop-blur-sm">
       <nav className="flex h-11 items-center justify-between px-4 md:px-8 lg:pl-[104px] lg:pr-8">
         <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
@@ -50,7 +50,7 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="border-t border-signal/30 bg-signal/15 rounded-b-xl md:hidden">
+        <div className="border-t border-ink/20 bg-ink/5 rounded-b-xl md:hidden">
           <ul className="flex flex-col px-6 py-2">
             {navLinks.map((link) => (
               <li key={link.href}>
