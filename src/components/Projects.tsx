@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Calculator from "./Calculator";
 
 const projects = [
   {
@@ -46,42 +47,54 @@ export default function Projects() {
           <h2 className="section-title">Projects.</h2>
         </motion.div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {projects.map((p, i) => (
-            <motion.a
-              key={p.title}
-              href="#contact"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="group block border border-ink/25 bg-paper p-6 transition-colors duration-100 hover:border-ink"
-            >
-              {/* Encabezado de ficha */}
-              <div className="mb-8 flex items-start justify-between">
-                <span className="mono text-[10px] uppercase tracking-wide text-gray-mid">
-                  {p.cat}
-                </span>
-                <span className="mono text-[10px] text-gray-light">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
+        {/* Dos cajones: proyectos a la izquierda, calculadora a la derecha */}
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto]">
+          {/* Cajón izquierda — proyectos */}
+          <div className="grid content-start gap-5 sm:grid-cols-2">
+            {projects.map((p, i) => (
+              <motion.a
+                key={p.title}
+                href="#contact"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+                className="group block border border-ink/25 bg-paper p-6 transition-colors duration-100 hover:border-ink"
+              >
+                <div className="mb-8 flex items-start justify-between">
+                  <span className="mono text-[10px] uppercase tracking-wide text-gray-mid">
+                    {p.cat}
+                  </span>
+                  <span className="mono text-[10px] text-gray-light">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="mono flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-gray-light transition-colors duration-100 group-hover:bg-signal" />
+                  <span className="mono text-[10px] uppercase tracking-wide text-gray-light">
+                    {p.spec}
+                  </span>
+                </div>
+                <h3 className="mt-3 text-xl font-medium leading-tight text-ink">
+                  {p.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                  {p.desc}
+                </p>
+              </motion.a>
+            ))}
+          </div>
 
-              <div className="mono flex items-center gap-2">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-gray-light transition-colors duration-100 group-hover:bg-signal" />
-                <span className="mono text-[10px] uppercase tracking-wide text-gray-light">
-                  {p.spec}
-                </span>
-              </div>
-
-              <h3 className="mt-3 text-xl font-medium leading-tight text-ink">
-                {p.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                {p.desc}
-              </p>
-            </motion.a>
-          ))}
+          {/* Cajón derecha — calculadora centrada */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.15 }}
+            className="flex items-start justify-center lg:w-[340px]"
+          >
+            <Calculator />
+          </motion.div>
         </div>
       </div>
     </section>
