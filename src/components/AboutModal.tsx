@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";
 
 const images = [
-  "/images/about/about-1.jpg",
-  "/images/about/about-2.jpg",
-  "/images/about/about-3.jpg",
-  "/images/about/about-4.jpg",
-  "/images/about/about-5.jpg",
-  "/images/about/about-6.jpg",
+  "/images/about/about-1.webp",
+  "/images/about/about-2.webp",
+  "/images/about/about-3.webp",
+  "/images/about/about-4.webp",
+  "/images/about/about-5.webp",
+  "/images/about/about-6.webp",
 ];
 
 const extendedInfo = [
@@ -32,7 +32,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Juan Carlos Cerrato — Ingeniero de Diseño Industrial">
-      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div className="grid gap-8 lg:grid-cols-[1fr_420px]">
         {/* Columna izquierda: Texto e info */}
         <div className="space-y-6 lg:col-span-1">
           <div className="space-y-4">
@@ -101,7 +101,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
 
         {/* Columna derecha: Carrusel más pequeño */}
         <div className="lg:col-span-1">
-          <div className="relative aspect-square max-w-[320px] mx-auto">
+          <div className="relative aspect-square max-w-[420px] mx-auto">
             <div className="relative aspect-square overflow-hidden bg-ground border border-ink/15">
               <AnimatePresence mode="wait">
                 <motion.img
