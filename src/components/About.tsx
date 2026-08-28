@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import AboutModal from "./AboutModal";
 
 const specs = [
   { key: "Role", value: "Ingeniero de Diseño Industrial · I+D" },
@@ -10,6 +12,8 @@ const specs = [
 ];
 
 export default function About() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section id="about" className="section-padding bg-paper">
       <div className="container-custom">
@@ -48,6 +52,22 @@ export default function About() {
             mentalidad internacional y remota.
           </motion.p>
 
+          {/* Botón Más sobre mí */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.15 }}
+            className="lg:col-span-2 flex items-center"
+          >
+            <button
+              onClick={() => setShowModal(true)}
+              className="mono border border-ink/40 px-6 py-4 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-signal hover:bg-signal hover:text-paper"
+            >
+              Más sobre mí
+            </button>
+          </motion.div>
+
           {/* Spec table — first-class */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -75,6 +95,8 @@ export default function About() {
           </motion.div>
         </div>
       </div>
+
+      <AboutModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }
