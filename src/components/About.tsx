@@ -33,33 +33,27 @@ export default function About() {
         </motion.div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-5">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.05 }}
-            className="text-[15px] leading-relaxed text-ink/80 lg:col-span-3"
-          >
-            Doble vocación: la ingeniería mecánica que da forma a productos
-            físicos y el software que automatiza el mundo digital. Trabajo en{" "}
-            <span className="font-medium text-ink">I+D y diseño mecánico</span>{" "}
-            con SolidWorks, AutoCAD, simulación y prototipado, con experiencia
-            en celdas de media tensión y soluciones SF6-Free. En paralelo,
-            construyo{" "}
-            <span className="font-medium text-ink">herramientas de IA,
-            automatización y software open source</span> con Python, FastAPI y
-            agentes locales sobre Linux. Del taller a la terminal, con
-            mentalidad internacional y remota.
-          </motion.p>
-
-          {/* Botón Más sobre mí */}
+          {/* Columna izquierda: Texto + Botón */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-            className="lg:col-span-2 flex items-center"
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="lg:col-span-3 space-y-6"
           >
+            <p className="text-[15px] leading-relaxed text-ink/80">
+              Doble vocación: la ingeniería mecánica que da forma a productos
+              físicos y el software que automatiza el mundo digital. Trabajo en{" "}
+              <span className="font-medium text-ink">I+D y diseño mecánico</span>{" "}
+              con SolidWorks, AutoCAD, simulación y prototipado, con experiencia
+              en celdas de media tensión y soluciones SF6-Free. En paralelo,
+              construyo{" "}
+              <span className="font-medium text-ink">herramientas de IA,
+              automatización y software open source</span> con Python, FastAPI y
+              agentes locales sobre Linux. Del taller a la terminal, con
+              mentalidad internacional y remota.
+            </p>
+
             <button
               onClick={() => setShowModal(true)}
               className="mono border border-ink/40 px-6 py-4 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-signal hover:bg-signal hover:text-paper"
@@ -68,7 +62,7 @@ export default function About() {
             </button>
           </motion.div>
 
-          {/* Spec table — first-class */}
+          {/* Columna derecha: Specifications */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
