@@ -12,6 +12,7 @@
   --gray-mid: 92 92 92;    /* #5c5c5c */
   --gray-light: 168 168 168; /* #a8a8a8 */
   --signal: 233 106 38;    /* #e96a26 */
+  --grid-line: rgba(25, 25, 25, 0.09);
   color-scheme: light;
 
   /* Widget calculadora (colores completos, no tripletes) */
@@ -28,6 +29,7 @@
   --gray-mid: 163 163 163; /* #a3a3a3 */
   --gray-light: 111 111 111; /* #6f6f6f */
   --signal: 233 106 38;    /* #e96a26 inalterado */
+  --grid-line: rgba(240, 236, 228, 0.12);
   color-scheme: dark;
 
   --calc-key: #2a2a2a;
@@ -109,16 +111,26 @@ body {
 /* Rejilla técnica Braun (grid de dibujo técnico) */
 .hero-grid {
   background-image:
-    linear-gradient(to right, rgba(25, 25, 25, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(25, 25, 25, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
 .hero-grid-fine {
   background-image:
-    linear-gradient(to right, rgba(25, 25, 25, 0.09) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(25, 25, 25, 0.09) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+/* Cursor de máquina de escribir */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.typewriter-caret {
+  animation: caret-blink 1s steps(1) infinite;
 }
 
 @layer utilities {

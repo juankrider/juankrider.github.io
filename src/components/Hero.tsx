@@ -1,6 +1,56 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+const ROLES = [
+  "Industrial Design Engineer",
+  "I+D · Product Development",
+  "AI / Automation",
+];
+
+function RoleTypewriter({ lines }: { lines: string[] }) {
+  const [text, setText] = useState("");
+  const [lineIdx, setLineIdx] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const target = lines[lineIdx];
+    const timer = setTimeout(
+      () => {
+        if (deleting) {
+          if (text.length <= 1) {
+            setText("");
+            setDeleting(false);
+            setLineIdx((lineIdx + 1) % lines.length);
+          } else {
+            setText(text.slice(0, -1));
+          }
+        } else if (text.length === target.length) {
+          const pauseMs = lineIdx === lines.length - 1 ? 2600 : 900 + target.length * 30;
+          setPaused(true);
+          setTimeout(() => {
+            setPaused(false);
+            setDeleting(true);
+          }, pauseMs);
+        } else {
+          setText(target.slice(0, text.length + 1));
+        }
+      },
+      deleting ? 20 : 55
+    );
+    return () => clearTimeout(timer);
+  }, [text, deleting, lineIdx, paused, lines]);
+
+  return (
+    <p className="mono text-[13px] uppercase tracking-wide text-gray-mid">
+      {text}
+      <span className="typewriter-caret text-signal">|</span>
+    </p>
+  );
+}
 
 export default function Hero() {
   return (
@@ -25,10 +75,8 @@ export default function Hero() {
             Cerrato
           </h1>
 
-          <div className="mono mt-8 space-y-2 text-[13px] uppercase tracking-wide text-gray-mid">
-            <p>Industrial Design Engineer</p>
-            <p>I+D · Product Development</p>
-            <p>AI / Automation</p>
+          <div className="mt-8">
+            <RoleTypewriter lines={ROLES} />
           </div>
 
           <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/80">

@@ -15,7 +15,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="no-print fixed inset-x-0 top-0 z-50 border-b border-ink/20 bg-ink/5 backdrop-blur-sm">
+    <header className="no-print fixed inset-x-0 top-0 z-50 overflow-hidden rounded-b-xl border border-ink/20 bg-ink/5 backdrop-blur-sm">
       <nav className="mx-auto flex h-11 max-w-[1200px] items-center justify-between px-8">
         <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
