@@ -15,8 +15,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="no-print fixed top-4 z-50 w-full max-w-[1200px] mx-auto rounded-xl border border-ink/20 bg-ink/5 backdrop-blur-sm">
-      <nav className="flex h-11 items-center justify-between px-8">
+    <header className="no-print fixed inset-x-0 top-0 z-50 border-b border-ink/20 bg-ink/5 backdrop-blur-sm">
+      <nav className="mx-auto flex h-11 max-w-[1200px] items-center justify-between px-8">
         <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
           <span className="inline-block h-2 w-2 rounded-full bg-signal" />
@@ -54,8 +54,8 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="border-t border-ink/20 bg-ink/5 rounded-b-xl md:hidden">
-          <ul className="flex flex-col px-6 py-2">
+        <div className="border-t border-ink/20 bg-ink/5 md:hidden">
+          <ul className="mx-auto flex max-w-[1200px] flex-col px-6 py-2">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
