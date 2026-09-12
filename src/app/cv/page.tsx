@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 import PrintButton from "@/components/PrintButton";
 
 export const metadata: Metadata = {
@@ -43,7 +44,9 @@ const contact = [
 
 export default function CVPage() {
   return (
-    <main className="bg-paper px-6 pb-16 pt-28 md:px-12">
+    <>
+      <Navbar />
+      <main className="bg-paper px-6 pb-16 pt-28 md:px-12">
       <div className="mx-auto max-w-3xl">
         {/* Cabecera */}
         <div className="mono flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-gray-mid">
@@ -137,5 +140,6 @@ export default function CVPage() {
         </p>
       </div>
     </main>
+    </>
   );
 }
