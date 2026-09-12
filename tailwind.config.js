@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ground: "#e4e1dc",
-        paper: "#f5f4f0",
-        ink: "#191919",
-        "gray-mid": "#5c5c5c",
-        "gray-light": "#a8a8a8",
-        signal: "#e96a26",
+        ground: "rgb(var(--ground) / <alpha-value>)",
+        paper: "rgb(var(--paper) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        "gray-mid": "rgb(var(--gray-mid) / <alpha-value>)",
+        "gray-light": "rgb(var(--gray-light) / <alpha-value>)",
+        signal: "rgb(var(--signal) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["Archivo", "Helvetica Neue", "Helvetica", "system-ui", "sans-serif"],

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://juankrider.github.io/juankcerrato",
+    url: "https://juankrider.github.io/",
     title: "Juan Carlos Cerrato | Industrial Design Engineer & AI Builder",
     description:
       "Ingeniero de Diseño Industrial especializado en I+D, automatización e inteligencia artificial.",
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  alternates: {
+    canonical: "https://juankrider.github.io/",
+  },
 };
 
 export default function RootLayout({
@@ -52,11 +55,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#e4e1dc" />
+        {/* Anti-FOUC: fija data-theme antes del primer paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}}();`,
+          }}
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#e4e1dc"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#141414"
+        />
       </head>
       <body className="min-h-screen bg-ground text-ink antialiased">
         {children}

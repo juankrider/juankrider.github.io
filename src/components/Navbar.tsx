@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -14,7 +15,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 z-50 w-full max-w-[1200px] mx-auto rounded-xl border border-ink/20 bg-ink/5 backdrop-blur-sm">
+    <header className="no-print fixed top-4 z-50 w-full max-w-[1200px] mx-auto rounded-xl border border-ink/20 bg-ink/5 backdrop-blur-sm">
       <nav className="flex h-11 items-center justify-between px-8">
         <a href="#" className="flex items-center gap-2">
           {/* Punto de "power" — funcional, never decorativo */}
@@ -38,15 +39,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          className="text-ink md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
-        >
-          <span className="mono text-[11px] uppercase tracking-wide">
-            {mobileOpen ? "Close" : "Menu"}
-          </span>
-        </button>
+        <div className="flex items-center gap-6">
+          <ThemeToggle />
+          <button
+            className="text-ink md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            <span className="mono text-[11px] uppercase tracking-wide">
+              {mobileOpen ? "Close" : "Menu"}
+            </span>
+          </button>
+        </div>
       </nav>
 
       {mobileOpen && (

@@ -52,6 +52,18 @@ export default function Contact() {
             </motion.a>
           ))}
         </div>
+
+        <motion.a
+          href="/cv"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          className="mono mt-10 inline-flex items-center gap-3 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:text-signal"
+        >
+          <span className="inline-block h-2 w-2 rounded-full bg-signal" />
+          Ver CV completo →
+        </motion.a>
       </div>
     </section>
   );

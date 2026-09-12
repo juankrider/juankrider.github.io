@@ -6,12 +6,34 @@
 
 :root {
   /* Dieter Rams / Braun tokens */
-  --ground: #e4e1dc;
-  --paper: #f5f4f0;
-  --ink: #191919;
-  --gray-mid: #5c5c5c;
-  --gray-light: #a8a8a8;
-  --signal: #e96a26;
+  --ground: 228 225 220;   /* #e4e1dc */
+  --paper: 245 244 240;    /* #f5f4f0 */
+  --ink: 25 25 25;         /* #191919 */
+  --gray-mid: 92 92 92;    /* #5c5c5c */
+  --gray-light: 168 168 168; /* #a8a8a8 */
+  --signal: 233 106 38;    /* #e96a26 */
+  color-scheme: light;
+
+  /* Widget calculadora (colores completos, no tripletes) */
+  --calc-key: #e4e1dc;
+  --calc-c: #5c5c5c;
+  --calc-eq: #191919;
+  --calc-eq-fg: #f5f4f0;
+}
+
+:root[data-theme="dark"] {
+  --ground: 20 20 20;      /* #141414 */
+  --paper: 30 30 30;       /* #1e1e1e */
+  --ink: 240 236 228;      /* #f0ece4 */
+  --gray-mid: 163 163 163; /* #a3a3a3 */
+  --gray-light: 111 111 111; /* #6f6f6f */
+  --signal: 233 106 38;    /* #e96a26 inalterado */
+  color-scheme: dark;
+
+  --calc-key: #2a2a2a;
+  --calc-c: #5c5c5c;
+  --calc-eq: #f0ece4;
+  --calc-eq-fg: #191919;
 }
 
 * {
@@ -26,8 +48,8 @@ html {
 }
 
 body {
-  background: var(--ground);
-  color: var(--ink);
+  background: rgb(var(--ground));
+  color: rgb(var(--ink));
   font-family: "Archivo", "Helvetica Neue", Helvetica, system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -45,11 +67,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ground);
+  background: rgb(var(--ground));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-mid);
+  background: rgb(var(--gray-mid));
 }
 
 .mono {
@@ -102,5 +124,12 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Impresión limpia (página /cv) */
+@media print {
+  .no-print {
+    display: none !important;
   }
 }

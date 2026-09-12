@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 
 const posts = [
   {
+    title: "Atlas Body Tracker: seguimiento físico por Telegram",
+    date: "2026",
+    tag: "IA / Automation",
+    excerpt:
+      "Peso y fotos al bot, dashboard web con tendencia. 32 tests y un stack Docker completo corriendo en local.",
+  },
+  {
+    title: "PDF AI Assistant: documentación técnica con IA",
+    date: "2026",
+    tag: "IA / Docs",
+    excerpt:
+      "Del documento normativo a respuestas con citas verificables: el motor que reutilizan mis otros proyectos de IA.",
+  },
+  {
     title: "Del taller a la terminal: ingeniería que abraza la IA",
-    date: "2024",
+    date: "2025",
     tag: "Engineering",
     excerpt:
       "Cómo el diseño mecánico industrial y el software open source convergen en un mismo flujo de trabajo.",
-  },
-  {
-    title: "SF6-Free y diseño sostenible en media tensión",
-    date: "2023",
-    tag: "R&D",
-    excerpt:
-      "El reto de sustituir el SF6: desarrollo de soluciones libres de gases fluorados.",
-  },
-  {
-    title: "Automatizando mi día con agentes locales",
-    date: "2023",
-    tag: "AI",
-    excerpt:
-      "Un asistente personal con Ollama, MCP y modelos que corren 100% en local.",
   },
 ];
 

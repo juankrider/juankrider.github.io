@@ -7,26 +7,26 @@ const projects = [
   {
     title: "Atlas",
     cat: "IA / Automation",
-    desc: "Asistente personal de IA modular con modelos locales.",
+    desc: "Asistente personal de IA modular con modelos locales y arquitectura de agentes.",
     spec: "Py · Ollama · OpenClaw",
+  },
+  {
+    title: "Atlas Body Tracker",
+    cat: "IA / Product",
+    desc: "Seguimiento físico diario: peso y fotos vía Telegram con dashboard web y tendencias.",
+    spec: "Py · Telegram API · Docker",
   },
   {
     title: "PDF AI Assistant",
     cat: "IA / Docs",
-    desc: "Extracción y análisis de documentación técnica.",
+    desc: "Extracción y análisis de documentación técnica con respuestas verificables.",
     spec: "Py · FastAPI",
   },
   {
     title: "StreetBall",
     cat: "Web / Product",
-    desc: "Plataforma web para organización deportiva.",
-    spec: "HTML · CSS · JS",
-  },
-  {
-    title: "AI Automation Lab",
-    cat: "IA / Tooling",
-    desc: "Automatizaciones personales con APIs, MCP, agentes.",
-    spec: "Py · MCP · APIs",
+    desc: "Plataforma web para organización deportiva con backend y autenticación.",
+    spec: "FastAPI · SQL · JS",
   },
 ];
 

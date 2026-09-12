@@ -88,8 +88,7 @@ export default function Calculator() {
         {/* Fila C */}
         <button
           onClick={clear}
-          className="mono col-span-4 h-10 text-sm text-paper transition-colors duration-100 hover:opacity-80"
-          style={{ background: "#5C5C5C" }}
+          className="mono col-span-4 h-10 bg-gray-mid text-sm text-paper transition-colors duration-100 hover:opacity-80"
           aria-label="Clear"
         >
           C
@@ -118,14 +117,14 @@ export default function Calculator() {
         <button
           onClick={inputDot}
           className="mono h-11 text-sm text-ink transition-colors duration-100 hover:opacity-80"
-          style={{ background: "#E4E1DC" }}
+          style={{ background: "var(--calc-key)" }}
         >
           .
         </button>
         <button
           onClick={equals}
-          className="mono h-11 text-sm text-paper transition-colors duration-100 hover:opacity-80"
-          style={{ background: "#191919" }}
+          className="mono h-11 text-sm transition-colors duration-100 hover:opacity-80"
+          style={{ background: "var(--calc-eq)", color: "var(--calc-eq-fg)" }}
         >
           =
         </button>
@@ -140,7 +139,7 @@ function Digit({ k, onClick }: { k: string; onClick: () => void }) {
     <button
       onClick={onClick}
       className="mono h-11 text-sm text-ink transition-colors duration-100 hover:opacity-80"
-      style={{ background: "#E4E1DC" }}
+      style={{ background: "var(--calc-key)" }}
     >
       {k}
     </button>
@@ -151,8 +150,7 @@ function Op({ k, onClick }: { k: string; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="mono h-11 text-sm text-paper transition-colors duration-100 hover:opacity-80"
-      style={{ background: "#E96A26" }}
+      className="mono h-11 bg-signal text-sm text-paper transition-colors duration-100 hover:opacity-80"
       aria-label={`Operator ${k}`}
     >
       {k}
