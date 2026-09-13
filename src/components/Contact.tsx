@@ -40,7 +40,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="group block border border-ink/25 bg-ground p-6 transition-colors duration-100 hover:border-ink"
+              className="group block rounded-xl border border-ink/25 bg-ground p-6 transition-colors duration-100 hover:border-ink"
             >
               <div className="mono mb-8 flex items-center justify-between text-[10px] uppercase tracking-wide text-gray-mid">
                 <span>{c.label}</span>

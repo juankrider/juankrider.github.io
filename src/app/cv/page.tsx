@@ -71,7 +71,7 @@ export default function CVPage() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-ink/25 bg-ground p-4 transition-colors duration-100 hover:border-ink"
+              className="group rounded-xl border border-ink/25 bg-ground p-4 transition-colors duration-100 hover:border-ink"
             >
               <div className="mono mb-3 flex items-center justify-between text-[10px] uppercase tracking-wide text-gray-mid">
                 <span>{c.label}</span>

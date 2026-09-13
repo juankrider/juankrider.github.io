@@ -54,7 +54,7 @@ function RoleTypewriter({ lines }: { lines: string[] }) {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-ground">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-ground">
       {/* Rejilla técnica de fondo */}
       <div className="hero-grid-fine pointer-events-none absolute inset-0" />
       <div className="relative grid w-full grid-cols-1 items-center gap-12 px-8 py-24 md:px-12 lg:max-w-[1120px] lg:grid-cols-[1fr_auto] lg:justify-start lg:pl-[104px] lg:pr-0">
@@ -88,13 +88,13 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#works"
-              className="mono bg-ink px-5 py-3 text-[11px] uppercase tracking-wide text-paper transition-colors duration-100 hover:bg-gray-mid"
+              className="mono rounded-lg bg-ink px-5 py-3 text-[11px] uppercase tracking-wide text-paper transition-colors duration-100 hover:bg-gray-mid"
             >
               Ver trabajos
             </a>
             <a
               href="#contact"
-              className="mono border border-ink/40 px-5 py-3 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-ink hover:bg-ink hover:text-paper"
+              className="mono rounded-lg border border-ink/40 px-5 py-3 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-ink hover:bg-ink hover:text-paper"
             >
               Contacto
             </a>
@@ -126,7 +126,7 @@ export default function Hero() {
               transition={{ duration: 0.3, delay: 0.2 + i * 0.1 }}
               className="relative"
             >
-              <div className={`${b.w} ${b.h} border border-ink/40 bg-paper flex items-center justify-between px-4`}>
+              <div className={`${b.w} ${b.h} rounded-lg border border-ink/40 bg-paper flex items-center justify-between px-4`}>
                 <span className="mono text-[10px] uppercase tracking-wide text-gray-mid">
                   {b.label}
                 </span>

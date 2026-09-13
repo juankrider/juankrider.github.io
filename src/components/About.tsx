@@ -56,7 +56,7 @@ export default function About() {
 
             <button
               onClick={() => setShowModal(true)}
-              className="mono border border-ink/40 px-6 py-4 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-signal hover:bg-signal hover:text-paper"
+              className="mono rounded-lg border border-ink/40 px-6 py-4 text-[11px] uppercase tracking-wide text-ink transition-colors duration-100 hover:border-signal hover:bg-signal hover:text-paper"
             >
               Más sobre mí
             </button>

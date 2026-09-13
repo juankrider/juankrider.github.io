@@ -102,7 +102,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
         {/* Columna derecha: Carrusel más pequeño */}
         <div className="lg:col-span-1">
           <div className="relative aspect-square max-w-[480px] mx-auto self-center">
-            <div className="relative aspect-square overflow-hidden bg-ground border border-ink/15">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-ground border border-ink/15">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentImage}

@@ -31,7 +31,7 @@ export default function Modal({ isOpen, onClose, title, children, className }: M
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.2 }}
-            className="relative w-full max-w-7xl max-h-[90vh] overflow-hidden bg-paper border border-ink/25"
+            className="relative w-full max-w-7xl max-h-[90vh] overflow-hidden rounded-2xl bg-paper border border-ink/25"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="absolute top-4 right-4 z-10">

@@ -19,16 +19,18 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
+      role="switch"
+      aria-checked={dark}
       aria-label={dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
-      aria-pressed={dark}
-      className="mono flex items-center gap-2 text-[10px] uppercase tracking-wide text-gray-mid transition-colors duration-100 hover:text-ink"
+      className={`relative h-6 w-10 shrink-0 rounded-full border border-ink/20 transition-colors duration-200 ${
+        dark ? "bg-signal" : "bg-gray-light"
+      }`}
     >
       <span
-        className={`inline-block h-2 w-2 rounded-full transition-colors duration-100 ${
-          dark ? "bg-signal" : "bg-gray-light"
+        className={`absolute left-0.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-paper shadow transition-transform duration-200 ${
+          dark ? "translate-x-4" : ""
         }`}
       />
-      {dark ? "Luz" : "Noche"}
     </button>
   );
 }
